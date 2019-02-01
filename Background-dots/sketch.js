@@ -13,7 +13,7 @@ function setup() {
   	for (var i = 0 - 1; i < 30; i++) {
 		myDots.push(new Particle(random(windowWidth), random(windowHeight)));
 	}
-	myDots[0].mahboi = true;
+	//myDots[0].mahboi = true;
   	
 }
 
@@ -51,23 +51,23 @@ function Particle(myX, myY){
 	this.y = myY;
 	this.vx = random(-1, 1);
 	this.vy = random(-1, 1);
-	this.mahboi = false;
+	// this.mahboi = false;
 	fill('#FFFFFFF');
 	
 	
 
 
 	this.draw = function(){
-		if(this.xflip){
-			fill('red');
-		}
-		else{
+		// if(this.xflip){
+		// 	fill('red');
+		// }
+		// else{
 			fill('white');
-		}
+		// }
 
-		if (this.mahboi){
-			fill('#39FF14');
-		}
+		// if (this.mahboi){
+		// 	fill('#39FF14');
+		// }
 
 		if(this.x >= width || this.x <= 0){
 			this.vx *= -1;
@@ -84,11 +84,11 @@ function Particle(myX, myY){
 		this.x += this.vx;
 		this.y += this.vy;
 
-		if(this.mahboi){
-			ellipse(this.x,this.y,10,10);
-		}else{
+		// if(this.mahboi){
+		// 	ellipse(this.x,this.y,10,10);
+		// }else{
 			ellipse(this.x,this.y,5,5);
-		}
+		//}
 		
 	}
 }
